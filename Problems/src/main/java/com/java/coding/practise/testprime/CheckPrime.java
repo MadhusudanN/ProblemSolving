@@ -9,6 +9,7 @@ public class CheckPrime {
 		 */
 
 		if (number < 0 || number > Integer.MAX_VALUE || number == 1) {
+			System.out.println("The number " + number + " is not prime");
 			return false;
 		}
 
@@ -17,9 +18,11 @@ public class CheckPrime {
 			for (int i = 2; i < number; i++) {
 				int reminder = number % i;
 				if (reminder == 0) {
+					System.out.println("The number " + number + " is not prime");
 					return false;
 				}
 			}
+			System.out.println("The number " + number + " is prime");
 			return true;
 
 		}
